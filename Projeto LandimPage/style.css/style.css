@@ -1,0 +1,108 @@
+body {
+    background-color: rgb(00,00,00);
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    max-width: 1200px;  /*mantem os elementos em harmonia em caso de zoom maior ou menor*/
+    margin:0 auto;  /* site vai ficar centralizada em caso de uma tela maior */
+    padding: 10px; /*margem entre o conteúdo e as bordas*/
+}
+header{
+    display: flex;
+    flex-direction: row;   /*coloca lado a lado os elementos que estão dentro do header*/
+    justify-content: space-between;/* vai criar um espaço entre as divs...não os elementos*/
+    /* align-items: center; centralizar os elementos */
+}
+#title{
+    color: rgb(210,105,30); ;
+    text-align: center;
+    font-size: 30px;
+    flex-direction: column; /* mantem fixa na mesma coluna dos elementos abaixo e acima*/ 
+    line-height: 20px;/*aproximou os elementos Marketing e Criativo, reduziu distância da linha*/
+}
+li{
+    font-size: 20px;
+    display: inline-block;/*todos os elementos do menu vão ficar um ao lado do outro*/
+    margin: 20px; /*dar uma pequena margem nos elementos da caixa,( não na div toda(ul))*/
+}
+#inscreva-se{
+    border: 2px solid rgb(210,105,30); /* formato do botão*/
+    padding: 10px; /*margem entre a linha da borda e a frase "ja tem uma conta?"*/
+    border-radius: 15px; /*borda arredondada*/
+    /* transition: 0.3s all; efeito de transição do botão ao passar o mouse */
+}
+#inscreva-se:hover{
+    background-color:  rgb(210,105,30);
+    color: white;
+}
+
+a{
+    color: white;   /*cor das palavras do menu é branca, mas tranforma conforme abaixo*/
+}
+a:hover {
+    color:rgb(210,105,30); /*cor que vai ficar ao passar o mouse*/
+    transition: 0.3s all;
+}
+h1{
+    font-weight: 1000;/* afina a letra da fonte*/
+}
+h2{
+    font-size: 40px; /* aumento o tamanho da font*/
+    line-height: 10px; /* aproximo os elementos */
+    font-family: Franklin Gothic;
+}
+main{
+    display: flex;/**/
+    flex-direction: row;  /* vai deixar os elementos um ao lado do outro/ o caso, a foto ao lado dos outros elementos*/
+    margin-top: 100px;  /* vai dar uma distância entre o cabeçalho e o corpo da page.*/
+}
+span{
+    color: rgb(210,105,30);/* vai transformar o texto que esta dentro da tag span na cor desejada*/
+}
+p{
+    font-size: 20px;
+    line-height: 20px; /*um espaço entre os elementos*/
+    max-width: 500px;/* faz o parágrafo te uma largura máxima de 500pixels*/
+    font-family:Helvetica;/* font da preferência*/
+}
+form [type="submit"]{ /* toda mudança feita aqui só vai valer para o botão tipo "submit"*/
+    height: 50px; /*altura*/
+    width: 50%; /*largura 50% do pai "form"*/
+    background-color: rgb(210,105,30) ; /*cor do botão*/
+    color: white;/*fonte com a cor brancas*/
+    font-weight: bold;/*intensidade da fonte*/
+}
+form [type="submit"]:hover{ /*aplica o efeito de transformação no botão enviar(submit)*/
+    cursor: pointer;/*aparece a mãozinha quando passa p mouse*/
+}
+form{
+    display: flex; /*para poder manipular as colunas do formulário*/
+    flex-direction: column; /* alinhar os itens do formuláro um em baixo do outro,como colunas*/
+    width: 70%; /*ajustando o tamanho que quero dos quadros do formuário;*/
+}
+input{
+    margin-top: 20px;/*da um espaço entre os elementos inputs*/
+    height: 10px;/*altura da aixa do formulário*/
+    padding: 15px; /*bordas internas*/
+    border-radius:  20px ;/*arrendondar as bordas*/
+    border:none; /*tirar a borda abaixo que vem automáticamente*/
+    font-size: 15px;/* aumentar a letra*/
+}
+.imagemfilmes{
+    margin: 0 0 0 150px; /*configuração da img/foto*/
+    width: 65%;
+
+    transform: translate(0px);/*a animação vai inicar no eixo zeero, onde ela esta*/
+    animation: float 5s ease-in-out infinite;/*vai animar em um intervalo de 6seg. para sempre*/
+}
+@keyframes float {/*vou chamar a animação chamada float através do keyframes para configurar a animação*/
+    0% {
+        transform: translateY(0px); /* a animação vai começar no eixo zero*/
+    }
+    50%{
+        transform: translateY(-30px);/* se deslocar para cima 50pixels*/
+    }
+    100% {
+        transform: translateY(0px);/* e depois voltar para seu eixo de origem(eixo 0)*/
+    }
+}
+

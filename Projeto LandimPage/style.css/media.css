@@ -1,0 +1,30 @@
+@media screen and (max-width: 760px){ /*quando a tela chegar abaixo de 760px ele vai aplicar toda a estilização que eu programei aqui para mobile*/ 
+    header{
+        flex-direction: column; /* os itens do cabeçalho se alinharão em colunas e não mais em linha*/
+    }
+    main{
+        flex-direction: column; /*mesma aplicação do header*/
+    }
+    h2{
+        text-align: center;
+        font-size: 38px;/*reduzindo o tamanho da fonte*/
+    }
+    form{
+        margin: 0 auto;/* centraliza o formulário*/
+        width:100%; /* ocupa 100% do espaço da coluna no mobile*/
+    }
+    input{
+        align-self: center;
+    }
+    img{
+        display: none;/* a imagem vai desapareer na versão mobile, mas pode manter s preferir apenas reduzir seu tamanho */
+    }
+    ul{
+        text-align: center;/*alinhar toda a lista no eio da tela*/
+        padding: 0px;
+    }
+
+}
+    
+
+    
